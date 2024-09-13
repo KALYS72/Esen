@@ -1,21 +1,24 @@
 #include <iostream>
 #include <iomanip>
+#include <limits>
 using namespace std;
 
 int main() {
-    double E = 1.0f, last_number;
+    float E = 1.0, last_number, Epsilon = std::numeric_limits<float>::epsilon();
     while (true) {
-      if (E+1!=1) {
+        if (E+1>1) {
         last_number = E;
         E /= 2;
-      }
-      else {
+    }
+    else {
         break;
-      }
-      
     }
-    if (last_number + 0 == 0) {
-      cout << "That does not work" << endl; // check if it works
+
     }
-    cout << "Machine Epsilon: " << setprecision(15) << last_number;
+    if (last_number != Epsilon) {
+        cout << "That does not work"; // if it works then it is comparable 
+    }
+    else {
+        cout << "Machine Epsilon: " << setprecision(15) << last_number;
+    }
 }
