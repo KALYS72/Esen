@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     long double Z = 1.0, last_number, Zero = std::numeric_limits<long double>::denorm_min();;
     while (true) {
-		if (2*Z>0) {
+		if (2*Z>Z) {
 			last_number = Z;
 			Z /= 2;
 		}	
