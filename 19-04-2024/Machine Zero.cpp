@@ -1,24 +1,13 @@
 #include <iostream>
-#include <iomanip>
-#include <limits>
 using namespace std;
 
 int main() {
-    long double Z = 1.0, last_number, Zero = std::numeric_limits<long double>::denorm_min();;
-    while (true) {
-		if (2*Z>Z) {
-			last_number = Z;
-			Z /= 2;
-		}	
-		else {
-			break;
-		}
-      
+    long double E = 1.0;
+    int n=0;
+    while (E+1>1) {
+        n++;
+        E /= 10;
     }
-    if (last_number != Zero) {
-      	cout << "That does not work"; // check if it works
-    }
-	else {
-    	cout << "Machine Zero: " << setprecision(15) << last_number;
-	}
+    std::cout << n;
 }
+   
