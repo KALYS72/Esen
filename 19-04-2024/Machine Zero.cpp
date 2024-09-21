@@ -2,11 +2,11 @@
 using namespace std;
 
 int main() {
-    long double E = 1.0;
+    long double Z = 1.0;
     int n=0;
-    while (E+1>1) {
+    while (2*Z>Z) {
         n++;
-        E /= 10;
+        Z /= 10;
     }
     std::cout << n;
 }
